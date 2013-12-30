@@ -168,12 +168,16 @@ abstract class PageObject extends WebDriverPage {
                 foundElement = timedCall(task, duration, durationUnit);
             } catch (InterruptedException ex) {
                 task.cancel(true);
+                throw new RuntimeException("Element could not be found: ", ex);
             } catch (ExecutionException ex) {
                 task.cancel(true);
+                throw new RuntimeException("Element could not be found: ", ex);
             } catch (TimeoutException ex) {
                 task.cancel(true);
+                throw new RuntimeException("Element could not be found: ", ex);
             } catch (java.util.concurrent.TimeoutException ex) {
                 task.cancel(true);
+                throw new RuntimeException("Element could not be found: ", ex);
             }
 
             return foundElement;
@@ -212,12 +216,16 @@ abstract class PageObject extends WebDriverPage {
                 foundElements = timedCall(task, duration, durationUnit);
             } catch (InterruptedException ex) {
                 task.cancel(true);
+                throw new RuntimeException("Element could not be found: ", ex);
             } catch (ExecutionException ex) {
                 task.cancel(true);
+                throw new RuntimeException("Element could not be found: ", ex);
             } catch (TimeoutException ex) {
                 task.cancel(true);
+                throw new RuntimeException("Element could not be found: ", ex);
             } catch (java.util.concurrent.TimeoutException ex) {
                 task.cancel(true);
+                throw new RuntimeException("Element could not be found: ", ex);
             }
 
             return foundElements;
