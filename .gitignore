@@ -1,6 +1,9 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+target
+.project
+.classpath
+.settings
+.metadata
+*~
+tmp
+nb-configuration.xml
+*.log
