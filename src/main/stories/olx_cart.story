@@ -1,7 +1,6 @@
-ShoppingCart functionality for Prom.UA
+ShoppingCart functionality for OLX.UA
 
 Meta:
-@author Irinka V.
 @category basic
 
 Narrative: 

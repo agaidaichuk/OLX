@@ -1,4 +1,4 @@
-package ua.prom.pages;
+package ua.olx.pages;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -25,7 +25,8 @@ public class Home extends PageObject {
     }
 
     public void go() {
-        get("http://prom.ua/");
+        get("http://olx.ua/");
+        manage().window().maximize();
     }
 
     public void go(final String section) {

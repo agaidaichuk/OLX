@@ -1,7 +1,6 @@
-Search Prom.UA by category
+Search OLX.UA by category
 
 Meta:
-@author Irinka V.
 @category advanced
 
 Narrative: 
@@ -12,7 +11,7 @@ I want to search for an item in a category
 
 Scenario: Advanced Search for a product
 
-Given I am searching on Prom.UA
+Given I am searching on OLX.UA
 When I specify the <thing_category> category
 And I search for <thing_product>
 Then there are search results

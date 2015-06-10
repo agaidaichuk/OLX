@@ -1,4 +1,4 @@
-package ua.prom.pages;
+package ua.olx.pages;
 
 import java.util.List;
 import javax.annotation.PostConstruct;

@@ -1,4 +1,4 @@
-package ua.prom.steps;
+package ua.olx.steps;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -8,12 +8,12 @@ import org.jbehave.core.annotations.Composite;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
-import ua.prom.pages.AdvancedSearch;
-import ua.prom.pages.Buy;
-import ua.prom.pages.CartContents;
-import ua.prom.pages.Home;
-import ua.prom.pages.SearchResults;
-import ua.prom.pages.Site;
+import ua.olx.pages.AdvancedSearch;
+import ua.olx.pages.Buy;
+import ua.olx.pages.CartContents;
+import ua.olx.pages.Home;
+import ua.olx.pages.SearchResults;
+import ua.olx.pages.Site;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -25,7 +25,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PromUaSteps {
+public class OlxSteps {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -44,18 +44,18 @@ public class PromUaSteps {
 
     private String justBought = "";
 
-    @Given("I am shopping for a $thing in $section on Prom.UA")
+    @Given("I am shopping for a $thing in $section on OLX.UA")
     public void shoppingForSomethingOnPromUa(String thing, String section) {
         home.go(section);
         home.search(thing);
     }
 
-    @Given("I am on Prom.UA")
+    @Given("I am on Olx.UA")
     public void homepageOnPromUa() {
         home.go();
     }
 
-    @Given("I am searching on Prom.UA")
+    @Given("I am searching on OLX.UA")
     public void advancedSearchingOnPromUa() {
         advancedSearch.go();
     }
@@ -96,12 +96,12 @@ public class PromUaSteps {
     }
 
     @When("I want to browse through a gallery")
-    @Composite(steps = { "When I want to buy something at Prom.UA", "When I want to browse the category",
+    @Composite(steps = { "When I want to buy something at OLX.UA", "When I want to browse the category",
         "When Buy something" })
     public void browseToFirstGallery() {
     }
 
-    @When("I want to buy something at Prom.UA")
+    @When("I want to buy something at OLX.UA")
     public void selectBuySection() {
         home.go();
         home.goToBuySection();

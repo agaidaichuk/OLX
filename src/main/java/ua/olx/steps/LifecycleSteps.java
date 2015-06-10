@@ -1,4 +1,4 @@
-package ua.prom.steps;
+package ua.olx.steps;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

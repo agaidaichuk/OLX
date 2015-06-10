@@ -1,4 +1,4 @@
-package ua.prom.pages;
+package ua.olx.pages;
 
 import com.google.common.base.Function;
 import java.util.List;

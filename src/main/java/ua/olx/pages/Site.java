@@ -1,4 +1,4 @@
-package ua.prom.pages;
+package ua.olx.pages;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

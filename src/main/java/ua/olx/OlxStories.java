@@ -1,4 +1,4 @@
-package ua.prom;
+package ua.olx;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -39,16 +39,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 
-/**
- * <p>
- * {@link Embeddable} class to run multiple textual stories via JUnit.
- * </p>
- * <p>
- * Stories are specified in classpath and correspondingly the
- * {@link LoadFromClasspath} story loader is configured.
- * </p>
- */
-public class PromUaStories extends JUnitStories {
+public class OlxStories extends JUnitStories {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -60,7 +51,7 @@ public class PromUaStories extends JUnitStories {
     private final Format[] formats;
     private final StoryReporterBuilder reporterBuilder;
 
-    public PromUaStories() {
+    public OlxStories() {
         pendingStepStrategy = new FailingUponPendingStep();
         crossReference = new CrossReference().withJsonOnly().withPendingStepStrategy(pendingStepStrategy)
             .withOutputAfterEachStory(true).excludingStoriesWithNoExecutedScenarios(true);
@@ -105,7 +96,7 @@ public class PromUaStories extends JUnitStories {
 
     @Override
     public InjectableStepsFactory stepsFactory() {
-        ApplicationContext context = new SpringApplicationContextFactory("classpath:/promua-steps.xml").createApplicationContext();
+        ApplicationContext context = new SpringApplicationContextFactory("classpath:/olx-steps.xml").createApplicationContext();
         return new SpringStepsFactory(configuration(), context);
     }
 

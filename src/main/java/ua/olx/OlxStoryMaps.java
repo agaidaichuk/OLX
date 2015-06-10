@@ -1,4 +1,4 @@
-package ua.prom;
+package ua.olx;
 
 import org.jbehave.core.configuration.Configuration;
 import org.jbehave.core.configuration.MostUsefulConfiguration;
@@ -24,11 +24,11 @@ import org.slf4j.LoggerFactory;
  * using the meta filters specified by {@link #metaFilters()}.
  * </p>
  */
-public class PromUaStoryMaps extends JUnitStoryMaps {
+public class OlxStoryMaps extends JUnitStoryMaps {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    public PromUaStoryMaps() {
+    public OlxStoryMaps() {
         configuredEmbedder().useMetaFilters(metaFilters());
     }
 
